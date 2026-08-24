@@ -1,0 +1,26 @@
+name = "bondhu-sonchoy-somiti"
+main = "worker/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bondhu-db"
+database_id = "YOUR_D1_DATABASE_ID_HERE"
+preview_database_id = "YOUR_D1_DATABASE_ID_HERE"
+
+# Optional R2 for member photos / documents
+# [[r2_buckets]]
+# binding = "R2"
+# bucket_name = "bondhu-files"
+
+[vars]
+APP_NAME = "বন্ধু সঞ্চয় সমিতি"
+
+# Secrets — set via dashboard or: npx wrangler secret put JWT_SECRET
+# Do NOT put JWT_SECRET in [vars] for production.
